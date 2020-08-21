@@ -1,0 +1,30 @@
+.Wrapper {
+    width: 25%;
+    min-width: 300px;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px 0px rgba(207, 207, 207, 0.64);
+    border-radius: 15px;
+    padding: 20px 15px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5% auto;
+    flex-direction: column;
+
+    form {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        label {
+            font-size: 1em;
+        }
+        input {
+            padding: 0.3em;
+            font-size: 1.4em;
+            margin-bottom: 10px;
+        }
+        button {
+            padding: 1em;
+        }
+    }
+}
