@@ -1,8 +1,22 @@
-.Label {
-    font-size: 1em;
-}
-.Input {
-    padding: 0.3em;
-    font-size: 1.4em;
-    margin-bottom: 10px;
+.Section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    .Label {
+        font-size: 0.8em;
+        text-transform: uppercase;
+    }
+
+    .Input {
+        padding: 0.5em;
+        font-size: 1em;
+        border-radius: 5px;
+        border: 1px solid #f3f3f3;
+
+        &:focus {
+            outline: none;
+            box-shadow: 0 0 0 1px #c8c8c8 inset;
+        }
+    }
 }

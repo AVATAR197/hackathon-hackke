@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import classes from "./Login.module.scss";
 import { loginFunc } from "../../utils/utils";
 import Input from "../../components/UI/Input/Input";
+import Button from "../../components/UI/Button/Button";
 
 const Login = () => {
     const [password, setPassword] = useState("");
@@ -27,8 +28,14 @@ const Login = () => {
             <h1>Log in</h1>
             <form onSubmit={login}>
                 <Input value={email} type="text" label="email" onChange={emailOnChangeHandler} />
-                <Input value={password} type="password" label="password" onChange={passwordOnChangeHandler} />
-                <button type="submit">Log in</button>
+                <Input
+                    autoComplete="current-passwords"
+                    value={password}
+                    type="password"
+                    label="password"
+                    onChange={passwordOnChangeHandler}
+                />
+                <Button type="submit">Log in</Button>
             </form>
         </div>
     );
