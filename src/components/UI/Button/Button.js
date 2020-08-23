@@ -1,5 +1,5 @@
-import React from "react";
-import classes from "./Button.module.scss";
+import React from 'react';
+import classes from './Button.module.scss';
 
 const Button = ({ children, onClick, ...rest }) => {
     return (

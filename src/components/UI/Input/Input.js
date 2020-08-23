@@ -1,5 +1,5 @@
-import React from "react";
-import classes from "./Input.module.scss";
+import React from 'react';
+import classes from './Input.module.scss';
 
 const Input = ({ type, label, onChange, value, ...rest }) => {
     return (
@@ -7,7 +7,14 @@ const Input = ({ type, label, onChange, value, ...rest }) => {
             <label className={classes.Label} htmlFor={label}>
                 {label}
             </label>
-            <input {...rest} value={value} className={classes.Input} onChange={onChange} type={type} id={label} />
+            <input
+                {...rest}
+                value={value}
+                className={classes.Input}
+                onChange={onChange}
+                type={type}
+                id={label}
+            />
         </section>
     );
 };
