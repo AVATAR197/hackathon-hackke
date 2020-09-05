@@ -28,10 +28,11 @@ const AddData = () => {
     const show = async () => 
     {
         const { value: formValues } = await Swal.fire({
-            title: 'Multiple inputs',
             html:
-              '<input id="swal-input1" class="swal2-input">' +
-              '<input id="swal-input2" class="swal2-input">',
+                '<label>Gluken</label>' +
+                '<input id="swal-input1" class="swal2-input" autocomplete="off">' +
+                '<label>Inzuline</label>' +
+                '<input id="swal-input2" class="swal2-input" autocomplete="off">',
             focusConfirm: false,
             preConfirm: () => {
               return [
