@@ -27,9 +27,9 @@ const AddData = () => {
         const { value: formValues } = await Swal.fire({
             html:
                 '<label>Gluken</label>' +
-                '<input id="swal-input1" class="swal2-input">' +
+                '<input id="swal-input1" class="swal2-input" autoComplete="off">' +
                 '<label>Inzuline</label>' +
-                '<input id="swal-input2" class="swal2-input">',
+                '<input id="swal-input2" class="swal2-input" autoComplete="off">',
             focusConfirm: false,
             preConfirm: () => {
                 return [
