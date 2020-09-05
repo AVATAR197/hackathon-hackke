@@ -18,6 +18,11 @@
         text-transform: uppercase;
         color: #38AECC;
         font-weight: 900;
+
+        i{
+            margin-right: 5px;
+            color: #046E8F;
+        }
     }
 
     .Items {
@@ -37,10 +42,14 @@
             text-transform: uppercase;
 
             &:hover {
-                transition: 0.2s ease-in-out;
                 background-color: #0090C1;
                 color: #fff;
             }
+        }
+
+        .ActiveLink{
+            background-color: #0090C1;
+            color: #fff;
         }
     }
 }

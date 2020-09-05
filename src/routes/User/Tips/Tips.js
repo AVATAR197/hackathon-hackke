@@ -97,6 +97,7 @@ const Tips = () => {
                         to eat it throughout the day instead of one bigger
                         portion in one go.
                     </p>
+                    <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80"/>
                 </section>
             </div>
         </div>
