@@ -1,0 +1,31 @@
+.Wrapper {
+    width: 90%;
+    margin: auto;
+    max-width: 750px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    .Image {
+        width: 200px;
+        height: 200px;
+        margin: 25px 0;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+    }
+
+    ul {
+        li {
+            list-style-type: none;
+            margin: 25px 0;
+            span {
+                font-weight: bold;
+                margin-left: 15px;
+            }
+        }
+    }
+}

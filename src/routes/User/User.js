@@ -1,7 +1,8 @@
 import React from 'react';
 import Dashboard from '../Dashboard/Dashboard';
 import { Switch, Route } from 'react-router-dom';
-import Profile from './Profile';
+import Profile from './Profile/Profile';
+import Tips from './Tips/Tips';
 
 const items = [
     {
@@ -13,7 +14,7 @@ const items = [
         path: '/profile',
     },
     {
-        name: 'tips',
+        name: 'tips from doctor',
         path: '/tips',
     },
 ];
@@ -22,7 +23,12 @@ const User = () => {
     return (
         <Dashboard items={items}>
             <Switch>
-                <Route path={`user/dashboard`}></Route>
+                <Route path={`/user/profile`}>
+                    <Profile />
+                </Route>
+                <Route path="/user/tips">
+                    <Tips />
+                </Route>
             </Switch>
         </Dashboard>
     );

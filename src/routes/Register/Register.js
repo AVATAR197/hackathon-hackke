@@ -28,6 +28,8 @@ const Register = () => {
 
         setErrors(validateForRegister(password, repeatPassword, email));
 
+        if (errors !== {}) return;
+
         registerFunc({ password, email, repeatPassword })
             .then((res) => console.log(res))
             .catch((err) => console.log(err));

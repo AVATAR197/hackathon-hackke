@@ -1,0 +1,23 @@
+.Wrapper {
+    width: 90%;
+    margin: auto;
+    max-width: 750px;
+
+    div {
+        section {
+            h3 {
+                color: #5eb3fd;
+                font-size: 1.5em;
+            }
+            p {
+                font-size: 1.1em;
+            }
+            ul {
+                li {
+                    font-size: 1.1em;
+                    margin: 10px 0;
+                }
+            }
+        }
+    }
+}
