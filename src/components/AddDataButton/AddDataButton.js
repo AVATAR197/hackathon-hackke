@@ -48,9 +48,9 @@ const AddData = () => {
     };
 
     return (
-        <div>
+        <>
             <button onClick={show} className={classes.button}>Add data</button>
-        </div>
+        </>
     );
 };
 
