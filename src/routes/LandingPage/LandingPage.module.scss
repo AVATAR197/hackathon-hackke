@@ -1,0 +1,21 @@
+.Wrapper {
+    background-color: orange;
+    .Image {
+        position: relative;
+        img {
+            width: 100%;
+            height: 450px;
+            object-fit: cover;
+        }
+
+        &::after {
+            content: '';
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+    }
+}
