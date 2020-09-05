@@ -17,11 +17,11 @@ const items = [
     },
 ];
 
-const User = () => {
+const User = (props) => {
     return (
         <Dashboard items={items}>
             <Switch>
-                <Route path="/"></Route>
+                <Route path={`user/dashboard`}></Route>
             </Switch>
         </Dashboard>
     );
