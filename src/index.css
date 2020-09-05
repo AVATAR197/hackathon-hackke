@@ -3,21 +3,15 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
 
-<<<<<<< HEAD
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;700;900&family=Roboto:wght@300;400;700;900&display=swap');
-
-body {
-    margin: 0;
-    font-family: 'Nunito Sans', sans-serif;
-    color: #183446;
-=======
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;700&family=Roboto:wght@300;400;700;900&display=swap");
 
 body {
     margin: 0;
     font-family: "Nunito Sans", sans-serif;
     color: #323234;
->>>>>>> 2f3edbd395557b0b0237a01bf6c4af0698d5f749
+    background: #fdfdfd;
+   
+
 }
 
 code {

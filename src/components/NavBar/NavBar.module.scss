@@ -37,10 +37,14 @@
             text-transform: uppercase;
 
             &:hover {
-                transition: 0.2s ease-in-out;
                 background-color: #0090C1;
                 color: #fff;
             }
+        }
+
+        .ActiveLink{
+            background-color: #0090C1;
+            color: #fff;
         }
     }
 }

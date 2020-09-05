@@ -14,6 +14,8 @@ const NavBar = ({ title, items = [] }) => {
                         <NavLink
                             key={index}
                             className={classes.Item}
+                            activeClassName={classes.ActiveLink}
+                            exact
                             to={`${e.path}`}
                         >
                             {e.name}

@@ -44,7 +44,6 @@ const Dashboard = () => {
     return (
         <div className={classes.Wrapper}>
             <h1>Main Page</h1>
-            <AddDataButton />
             <div className={classes.TableWrapper}>
                 <table {...getTableProps()}>
                     <thead>
@@ -102,6 +101,7 @@ const Dashboard = () => {
                     </tbody>
                 </table>
             </div>
+            <AddDataButton />
         </div>
     );
 };

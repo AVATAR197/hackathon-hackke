@@ -3,7 +3,6 @@ import classes from './AboutDoctor.module.scss';
 import Slider from 'react-slick';
 
 const settings = {
-    dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 2,
@@ -21,8 +20,7 @@ const AboutDoctor = () => {
                 style={{ border: 0 }}
                 allowFullScreen=""
                 aria-hidden="false"
-                tabIndex="0"
-            ></iframe>
+                tabIndex="0"></iframe>
             <div className={classes.Content}>
                 <h3>Diabetologická ambulancia</h3>
                 <p>
