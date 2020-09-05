@@ -1,0 +1,25 @@
+.Wrapper {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    flex-direction: column;
+    .FormWrapper {
+        display: grid;
+        width: 90%;
+        max-width: 750px;
+        margin: auto;
+        grid-gap: 15px;
+        section {
+            display: flex;
+            flex-direction: column;
+            input {
+                padding: 10px;
+                font-size: 1.2em;
+            }
+        }
+    }
+    img {
+        height: 250px;
+        margin: auto;
+    }
+}

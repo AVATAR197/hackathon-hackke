@@ -27,7 +27,7 @@ const items = [
 
 const User = () => {
     return (
-        <Dashboard title="pacient" items={items}>
+        <Dashboard title="patient" items={items}>
             <Switch>
                 <Route path={`/user`} exact>
                     <MainPage />

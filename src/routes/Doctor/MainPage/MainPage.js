@@ -1,22 +1,41 @@
 import React from 'react';
-import AddDataButton from '../../../components/AddDataButton/AddDataButton';
 import classes from './MainPage.module.scss';
 import { useTable } from 'react-table';
 
-const Dashboard = () => {
+const MainPage = () => {
     const columns = React.useMemo(
         () => [
             {
-                Header: 'Date',
-                accessor: 'date', // accessor is the "key" in the data
+                Header: 'First Name',
+                accessor: 'firstName', // accessor is the "key" in the data
             },
             {
-                Header: 'Gluken',
-                accessor: 'gluken',
+                Header: 'Second Name',
+                accessor: 'secondName',
             },
             {
-                Header: 'Insuline',
-                accessor: 'insuline',
+                Header: 'Date of birth',
+                accessor: 'birthdate',
+            },
+            {
+                Header: 'Diabetes type',
+                accessor: 'diabetesType',
+            },
+            {
+                Header: 'Details',
+                accessor: '',
+                Cell: ({ cell }) => (
+                    <button
+                        value={cell.row.values.name}
+                        onClick={() =>
+                            alert(
+                                'todo --> navigate to the details of the user'
+                            )
+                        }
+                    >
+                        Details
+                    </button>
+                ),
             },
         ],
         []
@@ -24,9 +43,10 @@ const Dashboard = () => {
     const data = React.useMemo(
         () => [
             {
-                date: '10.2.2020 15:48',
-                gluken: '152.25 g/mol',
-                insuline: '15',
+                firstName: 'Hello',
+                secondName: 'World',
+                birthdate: '10.2.2001',
+                diabetesType: 2,
             },
         ],
         []
@@ -43,8 +63,6 @@ const Dashboard = () => {
 
     return (
         <div className={classes.Wrapper}>
-            <h1>Main Page</h1>
-            <AddDataButton />
             <div className={classes.TableWrapper}>
                 <table {...getTableProps()}>
                     <thead>
@@ -106,4 +124,4 @@ const Dashboard = () => {
     );
 };
 
-export default Dashboard;
+export default MainPage;

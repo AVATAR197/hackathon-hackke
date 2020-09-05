@@ -1,11 +1,17 @@
 import React from 'react';
 import Dashboard from '../Dashboard/Dashboard';
 import { Switch, Route } from 'react-router-dom';
+import AddPatient from './AddPatient/AddPatient';
+import MainPage from './MainPage/MainPage';
 
 const items = [
     {
-        name: 'add pacient',
-        path: '/doctor/add-pacient',
+        name: 'preview',
+        path: '/doctor',
+    },
+    {
+        name: 'add patient',
+        path: '/doctor/add-patient',
     },
     {
         name: 'profile',
@@ -16,7 +22,14 @@ const items = [
 const Doctor = () => {
     return (
         <Dashboard title="doctor" items={items}>
-            <div>doctor add pacient</div>
+            <Switch>
+                <Route path="/doctor" exact>
+                    <MainPage />
+                </Route>
+                <Route path="/doctor/add-patient">
+                    <AddPatient />
+                </Route>
+            </Switch>
         </Dashboard>
     );
 };

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import moment from 'moment';
 import Swal from 'sweetalert2';
-import classes from './AddDataButton.module.scss'
+import classes from './AddDataButton.module.scss';
 
 const AddData = () => {
     const [data, setData] = useState({
@@ -26,9 +26,9 @@ const AddData = () => {
     const show = async () => {
         const { value: formValues } = await Swal.fire({
             html:
-                '<label>Gluken</label>'+
+                '<label>Gluken</label>' +
                 '<input id="swal-input1" class="swal2-input">' +
-                '<label>Inzuline</label>'+
+                '<label>Inzuline</label>' +
                 '<input id="swal-input2" class="swal2-input">',
             focusConfirm: false,
             preConfirm: () => {
@@ -49,7 +49,9 @@ const AddData = () => {
 
     return (
         <>
-            <button onClick={show} className={classes.button}>Add data</button>
+            <button onClick={show} className={classes.button}>
+                Add data
+            </button>
         </>
     );
 };

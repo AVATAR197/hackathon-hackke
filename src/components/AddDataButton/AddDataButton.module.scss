@@ -1,4 +1,4 @@
-button{
+.button {
     background: transparent;
     outline: none;
     cursor: pointer;
@@ -10,9 +10,9 @@ button{
     color: #2ecc71;
     font-weight: bold;
 
-    &:hover{
-        background:#2ecc71;
+    &:hover {
+        background: #2ecc71;
         color: #fff;
-        transition: .2s ease-in-out;
+        transition: 0.2s ease-in-out;
     }
 }
