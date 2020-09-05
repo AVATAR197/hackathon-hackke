@@ -1,6 +1,9 @@
 import React from 'react';
 import classes from './MainPage.module.scss';
-import { useTable } from 'react-table';
+import { useTable, useGlobalFilter } from 'react-table';
+import GlobalFilter from '../../../components/GlobalSearch/GlobalSearch';
+import Button from '../../../components/UI/Button/Button';
+import Table from '../../../components/Table/Table';
 
 const MainPage = () => {
     const columns = React.useMemo(
@@ -25,7 +28,7 @@ const MainPage = () => {
                 Header: 'Details',
                 accessor: '',
                 Cell: ({ cell }) => (
-                    <button
+                    <Button
                         value={cell.row.values.name}
                         onClick={() =>
                             alert(
@@ -34,7 +37,7 @@ const MainPage = () => {
                         }
                     >
                         Details
-                    </button>
+                    </Button>
                 ),
             },
         ],
@@ -48,10 +51,71 @@ const MainPage = () => {
                 birthdate: '10.2.2001',
                 diabetesType: 2,
             },
+            {
+                firstName: 'John',
+                secondName: 'Krakskf',
+                birthdate: '10.2.20545001',
+                diabetesType: 1,
+            },
+            {
+                firstName: 'sadfasdf',
+                secondName: 'asdfasdf',
+                birthdate: '10.2.2001',
+                diabetesType: 1,
+            },
+            {
+                firstName: 'Hello',
+                secondName: 'World',
+                birthdate: '10.2.2001',
+                diabetesType: 2,
+            },
+            {
+                firstName: 'Hello',
+                secondName: 'World',
+                birthdate: '10.2.2001',
+                diabetesType: 2,
+            },
+            {
+                firstName: 'Hello',
+                secondName: 'World',
+                birthdate: '10.2.2001',
+                diabetesType: 2,
+            },
+            {
+                firstName: 'Hello',
+                secondName: 'World',
+                birthdate: '10.2.2001',
+                diabetesType: 2,
+            },
+
+            {
+                firstName: 'Hello',
+                secondName: 'World',
+                birthdate: '10.2.2001',
+                diabetesType: 2,
+            },
+            {
+                firstName: 'Hello',
+                secondName: 'World',
+                birthdate: '10.2.2001',
+                diabetesType: 2,
+            },
+
+            {
+                firstName: 'Hello',
+                secondName: 'World',
+                birthdate: '10.2.2001',
+                diabetesType: 2,
+            },
+            {
+                firstName: 'Hello',
+                secondName: 'World',
+                birthdate: '10.2.2001',
+                diabetesType: 2,
+            },
         ],
         []
     );
-    const tableInstance = useTable({ columns, data });
 
     const {
         getTableProps,
@@ -59,67 +123,31 @@ const MainPage = () => {
         headerGroups,
         rows,
         prepareRow,
-    } = tableInstance;
+        state,
+        preGlobalFilteredRows,
+        setGlobalFilter,
+    } = useTable(
+        {
+            columns,
+            data,
+        },
+        useGlobalFilter // useGlobalFilter!
+    );
 
     return (
         <div className={classes.Wrapper}>
-            <div className={classes.TableWrapper}>
-                <table {...getTableProps()}>
-                    <thead>
-                        {
-                            // Loop over the header rows
-                            headerGroups.map((headerGroup) => (
-                                // Apply the header row props
-                                <tr {...headerGroup.getHeaderGroupProps()}>
-                                    {
-                                        // Loop over the headers in each row
-                                        headerGroup.headers.map((column) => (
-                                            // Apply the header cell props
-                                            <th {...column.getHeaderProps()}>
-                                                {
-                                                    // Render the header
-                                                    column.render('Header')
-                                                }
-                                            </th>
-                                        ))
-                                    }
-                                </tr>
-                            ))
-                        }
-                    </thead>
-                    {/* Apply the table body props */}
-                    <tbody {...getTableBodyProps()}>
-                        {
-                            // Loop over the table rows
-                            rows.map((row) => {
-                                // Prepare the row for display
-                                prepareRow(row);
-                                return (
-                                    // Apply the row props
-                                    <tr {...row.getRowProps()}>
-                                        {
-                                            // Loop over the rows cells
-                                            row.cells.map((cell) => {
-                                                // Apply the cell props
-                                                return (
-                                                    <td
-                                                        {...cell.getCellProps()}
-                                                    >
-                                                        {
-                                                            // Render the cell contents
-                                                            cell.render('Cell')
-                                                        }
-                                                    </td>
-                                                );
-                                            })
-                                        }
-                                    </tr>
-                                );
-                            })
-                        }
-                    </tbody>
-                </table>
-            </div>
+            <GlobalFilter
+                preGlobalFilteredRows={preGlobalFilteredRows}
+                globalFilter={state.globalFilter}
+                setGlobalFilter={setGlobalFilter}
+            />
+            <Table
+                getTableProps={getTableProps}
+                getTableBodyProps={getTableBodyProps}
+                headerGroups={headerGroups}
+                rows={rows}
+                prepareRow={prepareRow}
+            />
         </div>
     );
 };
