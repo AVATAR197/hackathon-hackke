@@ -9,7 +9,7 @@ const UserDetails = () => {
         //fetch the user data using this id
     }, [id]);
 
-    return <div>{id}</div>;
+    return <div>User id: {id}</div>;
 };
 
 export default UserDetails;
