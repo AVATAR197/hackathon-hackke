@@ -17,7 +17,7 @@ const items = [
     },
 ];
 
-const User = (props) => {
+const User = () => {
     return (
         <Dashboard items={items}>
             <Switch>
