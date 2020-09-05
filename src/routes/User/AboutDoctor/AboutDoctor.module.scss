@@ -3,17 +3,25 @@
     width: 90%;
     margin: 100px auto;
 
+    h3, p, li{
+        line-height: 30px;
+        letter-spacing: 0.6px;
+    }
+
     h3 {
-        color: #5eb3fd;
-        font-size: 2em;
+        color: #007d96;
+        font-weight: 700;
+        font-size: 38px;
+        line-height: 48px;
     }
     p {
-        font-size: 1.1em;
+        font-size: 20px;
+        line-height: 40px;
     }
     ul {
         li {
-            font-size: 1.1em;
-            margin: 15px 0;
+            font-size: 20px;
+            line-height: 40px;
         }
     }
 }

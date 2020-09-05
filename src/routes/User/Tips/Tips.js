@@ -4,7 +4,6 @@ import classes from './Tips.module.scss';
 const Tips = () => {
     return (
         <div className={classes.Wrapper}>
-            <h1>Tips</h1>
             <div>
                 <section>
                     <h3>Choose healthier carbohydrates</h3>
