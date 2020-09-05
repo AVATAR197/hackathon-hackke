@@ -4,8 +4,10 @@ import { useTable, useGlobalFilter } from 'react-table';
 import GlobalFilter from '../../../components/GlobalSearch/GlobalSearch';
 import Button from '../../../components/UI/Button/Button';
 import Table from '../../../components/Table/Table';
+import { useHistory } from 'react-router-dom';
 
 const MainPage = () => {
+    const history = useHistory();
     const columns = React.useMemo(
         () => [
             {
@@ -26,13 +28,13 @@ const MainPage = () => {
             },
             {
                 Header: 'Details',
-                accessor: '',
+                accessor: 'id',
                 Cell: ({ cell }) => (
                     <Button
                         value={cell.row.values.name}
                         onClick={() =>
-                            alert(
-                                'todo --> navigate to the details of the user'
+                            history.push(
+                                `/doctor/patient-details/${cell.value}`
                             )
                         }
                     >
@@ -50,68 +52,84 @@ const MainPage = () => {
                 secondName: 'World',
                 birthdate: '10.2.2001',
                 diabetesType: 2,
+                id: 'kasdjflksdajfkllasjkdflksjdl',
             },
             {
                 firstName: 'John',
                 secondName: 'Krakskf',
                 birthdate: '10.2.20545001',
                 diabetesType: 1,
+                id: 'kas68s5df4153sd41fsd14f',
             },
             {
                 firstName: 'sadfasdf',
                 secondName: 'asdfasdf',
                 birthdate: '10.2.2001',
                 diabetesType: 1,
+                id: '5465as2d4f56s41d56f24sd6f41sd',
             },
             {
                 firstName: 'Hello',
                 secondName: 'World',
                 birthdate: '10.2.2001',
                 diabetesType: 2,
+                id: '652sdfs6d2f5s32d4fsd',
             },
             {
                 firstName: 'Hello',
                 secondName: 'World',
                 birthdate: '10.2.2001',
                 diabetesType: 2,
+                id: 'kasdjflksdajfkllasjkdflksjdl',
+            },
+            {
+                firstName: 'John',
+                secondName: 'Krakskf',
+                birthdate: '10.2.20545001',
+                diabetesType: 1,
+                id: 'kas68s5df4153sd41fsd14f',
+            },
+            {
+                firstName: 'sadfasdf',
+                secondName: 'asdfasdf',
+                birthdate: '10.2.2001',
+                diabetesType: 1,
+                id: '5465as2d4f56s41d56f24sd6f41sd',
             },
             {
                 firstName: 'Hello',
                 secondName: 'World',
                 birthdate: '10.2.2001',
                 diabetesType: 2,
+                id: '652sdfs6d2f5s32d4fsd',
             },
             {
                 firstName: 'Hello',
                 secondName: 'World',
                 birthdate: '10.2.2001',
                 diabetesType: 2,
-            },
-
-            {
-                firstName: 'Hello',
-                secondName: 'World',
-                birthdate: '10.2.2001',
-                diabetesType: 2,
+                id: 'kasdjflksdajfkllasjkdflksjdl',
             },
             {
-                firstName: 'Hello',
-                secondName: 'World',
-                birthdate: '10.2.2001',
-                diabetesType: 2,
+                firstName: 'John',
+                secondName: 'Krakskf',
+                birthdate: '10.2.20545001',
+                diabetesType: 1,
+                id: 'kas68s5df4153sd41fsd14f',
             },
-
             {
-                firstName: 'Hello',
-                secondName: 'World',
+                firstName: 'sadfasdf',
+                secondName: 'asdfasdf',
                 birthdate: '10.2.2001',
-                diabetesType: 2,
+                diabetesType: 1,
+                id: '5465as2d4f56s41d56f24sd6f41sd',
             },
             {
                 firstName: 'Hello',
                 secondName: 'World',
                 birthdate: '10.2.2001',
                 diabetesType: 2,
+                id: '652sdfs6d2f5s32d4fsd',
             },
         ],
         []

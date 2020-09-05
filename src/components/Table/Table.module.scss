@@ -1,9 +1,10 @@
 .TableWrapper {
-    overflow: scroll;
-    height: 550px;
+    overflow: auto;
+    max-height: 550px;
+    position: relative;
     table {
         tbody {
-            height: 550px;
+            max-height: 550px;
         }
         width: 100%;
         border-spacing: 0;

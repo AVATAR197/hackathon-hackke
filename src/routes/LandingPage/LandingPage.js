@@ -15,7 +15,7 @@ const LandingPage = () => {
             <h1>Sign in as</h1>
             <div className={classes.ButtonWrapper}>
                 <Link className={classes.Button} to="/user">
-                    Pacient
+                    Patient
                 </Link>
                 <Link className={classes.Button} to="/doctor">
                     Doctor

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import moment from 'moment';
 import Swal from 'sweetalert2';
 import classes from './AddDataButton.module.scss';
+import Button from '../UI/Button/Button';
 
 const AddData = () => {
     const [data, setData] = useState({
@@ -49,9 +50,9 @@ const AddData = () => {
 
     return (
         <>
-            <button onClick={show} className={classes.button}>
+            <Button onClick={show} className={classes.button}>
                 Add data
-            </button>
+            </Button>
         </>
     );
 };

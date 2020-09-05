@@ -3,6 +3,7 @@ import Dashboard from '../Dashboard/Dashboard';
 import { Switch, Route } from 'react-router-dom';
 import AddPatient from './AddPatient/AddPatient';
 import MainPage from './MainPage/MainPage';
+import UserDetails from './UserDetails/UserDetails';
 
 const items = [
     {
@@ -28,6 +29,9 @@ const Doctor = () => {
                 </Route>
                 <Route path="/doctor/add-patient">
                     <AddPatient />
+                </Route>
+                <Route path="/doctor/patient-details/:id">
+                    <UserDetails />
                 </Route>
             </Switch>
         </Dashboard>
