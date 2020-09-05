@@ -18,6 +18,7 @@
         text-transform: uppercase;
         color: #38AECC;
         font-weight: 900;
+        user-select: none; 
 
         i{
             margin-right: 5px;
@@ -28,6 +29,10 @@
     .Items {
         display: flex;
         flex-direction: row;
+
+        .active{
+            display: none;
+        }
 
         .Item {
             display: flex;
