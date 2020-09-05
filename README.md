@@ -21,7 +21,7 @@ routes:
 
 <br />
 
-### For now there are accesible only routes:
+### For now there are accessible only routes:
 
 | Route name | Renderred copmonent |
 | ---------- | ------------------- |
