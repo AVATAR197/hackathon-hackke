@@ -18,14 +18,19 @@
         }
     }
 
-    ul {
-        li {
-            list-style-type: none;
-            margin: 25px 0;
-            span {
-                font-weight: bold;
-                margin-left: 15px;
-            }
+    table{
+        td{
+            padding: 12px 16px;
+            font-size: 20px;
+        }
+
+        .Info{
+            color: #007d96;
+        }
+
+        .Data{
+            color: #323234;
+            font-weight: bold;
         }
     }
 }

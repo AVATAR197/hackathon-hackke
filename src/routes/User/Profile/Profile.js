@@ -11,20 +11,30 @@ const Profile = () => {
                     alt="profile_picture"
                 />
             </div>
-            <ul>
-                <li>
-                    Diabetes type: <span>2</span>
-                </li>
-                <li>
-                    Name: <span>Jack John</span>
-                </li>
-                <li>
-                    Birth date: <span>20.5.2001</span>
-                </li>
-                <li>
-                    BirthNumber: <span>56010561041560</span>
-                </li>
-            </ul>
+
+            <table>
+                <tbody>
+                    <tr>
+                        <td className={classes.Info}>Diabetes type:</td>
+                        <td className={classes.Data}>2</td>
+                    </tr>
+
+                    <tr>
+                        <td className={classes.Info}>Name:</td>
+                        <td className={classes.Data}>Jack John</td>
+                    </tr>
+
+                    <tr>
+                        <td className={classes.Info}>BirthDate:</td>
+                        <td className={classes.Data}>20.5.2001</td>
+                    </tr>
+
+                    <tr>
+                        <td className={classes.Info}>Birth number:</td>
+                        <td className={classes.Data}>110998/7458</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     );
 };

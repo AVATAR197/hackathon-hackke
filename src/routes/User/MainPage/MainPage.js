@@ -42,7 +42,7 @@ const Dashboard = () => {
     } = tableInstance;
 
     return (
-        <div className={classes.cc}>
+        <div className={classes.Wrapper}>
             <h1>Main Page</h1>
             <AddDataButton />
             <div className={classes.TableWrapper}>

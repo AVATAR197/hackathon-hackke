@@ -2,10 +2,11 @@ import React, { useReducer, useState } from 'react';
 import Swal from 'sweetalert2';
 import classes from './AddPatient.module.scss';
 import HospitalImage from '../../../assets/hospital.jpg';
+import Button from '../../../components/UI/Button/Button';
 
 // const reducer = useReducer((state, action) => {
 //     switch (action.type) {
-//         case value:
+//         case '':
 //             break;
 
 //         default:
@@ -15,7 +16,6 @@ import HospitalImage from '../../../assets/hospital.jpg';
 
 const AddPatient = () => {
     const handleFormSubmit = (e) => {
-        console.log(e);
         e.preventDefault();
         Swal.fire({
             title: 'Are you sure you want to add the new user?',
@@ -74,7 +74,7 @@ const AddPatient = () => {
                         name="birth_number"
                     />
                 </section>
-                <button type="submit">Add the user</button>
+                <Button type="submit">Add the user</Button>
             </form>
         </div>
     );

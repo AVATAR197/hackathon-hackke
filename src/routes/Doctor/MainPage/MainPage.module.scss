@@ -1,0 +1,48 @@
+.Wrapper {
+    width: 90%;
+    max-width: 1050px;
+    margin: auto;
+    .TableWrapper {
+        table {
+            width: 100%;
+            border-spacing: 0;
+            border: 1px solid rgb(201, 201, 201);
+
+            tr {
+                :last-child {
+                    td {
+                        border-bottom: 0;
+                    }
+                }
+            }
+
+            th,
+            td {
+                margin: 0;
+                padding: 1rem 1.5rem;
+                border-bottom: 1px solid rgb(201, 201, 201);
+                border-right: 1px solid rgb(201, 201, 201);
+                text-align: center;
+
+                button {
+                    background: transparent;
+                    outline: none;
+                    cursor: pointer;
+                    padding: 16px 32px;
+                    font-size: 16px;
+                    color: #fff;
+                    border-radius: 4px;
+                    border: 2px solid #2ecc71;
+                    color: #2ecc71;
+                    font-weight: bold;
+
+                    &:hover {
+                        background: #2ecc71;
+                        color: #fff;
+                        transition: 0.2s ease-in-out;
+                    }
+                }
+            }
+        }
+    }
+}
