@@ -21,7 +21,7 @@ const LandingPage = () => {
                     Doctor
                 </Link>
             </div>
-            <div>
+            <div className={classes.WithoutAccountDiv}>
                 <p>You don't have an account?</p>
                 <Link>Sign Up</Link>
             </div>

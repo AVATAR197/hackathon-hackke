@@ -11,7 +11,7 @@ const NavBar = ({ title, items = [] }) => {
             <div className={classes.Items}>
                 {items.map((e) => {
                     return (
-                        <NavLink className={classes.Item} to={`/user${e.path}`}>
+                        <NavLink className={classes.Item} to={`${e.path}`}>
                             {e.name}
                         </NavLink>
                     );

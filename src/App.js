@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import User from './routes/User/User';
+import Doctor from './routes/Doctor/Doctor';
 import Register from './routes/Register/Register';
 import Login from './routes/Login/Login';
 import LandingPage from './routes/LandingPage/LandingPage';
@@ -19,6 +20,9 @@ const App = () => (
             </Route>
             <Route path="/user">
                 <User />
+            </Route>
+            <Route path="/doctor">
+                <Doctor />
             </Route>
         </Switch>
     </BrowserRouter>

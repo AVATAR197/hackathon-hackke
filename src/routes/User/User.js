@@ -3,26 +3,34 @@ import Dashboard from '../Dashboard/Dashboard';
 import { Switch, Route } from 'react-router-dom';
 import Profile from './Profile/Profile';
 import Tips from './Tips/Tips';
+import MainPage from './MainPage/MainPage';
 
 const items = [
     {
         name: 'dashboard',
-        path: '/dashboard',
+        path: '/user',
     },
     {
         name: 'profile',
-        path: '/profile',
+        path: '/user/profile',
     },
     {
         name: 'tips from doctor',
-        path: '/tips',
+        path: '/user/tips',
+    },
+    {
+        name: 'about the doctor',
+        path: '/user/about-doctor',
     },
 ];
 
 const User = () => {
     return (
-        <Dashboard items={items}>
+        <Dashboard title="pacient" items={items}>
             <Switch>
+                <Route path={`/user`}>
+                    <MainPage />
+                </Route>
                 <Route path={`/user/profile`}>
                     <Profile />
                 </Route>
