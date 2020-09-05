@@ -9,9 +9,13 @@ const NavBar = ({ title, items = [] }) => {
         <div className={classes.Wrapper}>
             <div className={classes.Title}>{title}</div>
             <div className={classes.Items}>
-                {items.map((e) => {
+                {items.map((e, index) => {
                     return (
-                        <NavLink className={classes.Item} to={`${e.path}`}>
+                        <NavLink
+                            key={index}
+                            className={classes.Item}
+                            to={`${e.path}`}
+                        >
                             {e.name}
                         </NavLink>
                     );

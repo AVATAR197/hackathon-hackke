@@ -1,0 +1,36 @@
+.Content {
+    max-width: 750px;
+    width: 90%;
+    margin: 100px auto;
+
+    h3 {
+        color: #5eb3fd;
+        font-size: 2em;
+    }
+    p {
+        font-size: 1.1em;
+    }
+    ul {
+        li {
+            font-size: 1.1em;
+            margin: 15px 0;
+        }
+    }
+}
+.SlickWrapper {
+    background-color: #f2f2f2;
+    padding: 25px 0;
+    width: 100%;
+    box-sizing: border-box;
+
+    .SlickContent {
+        max-width: 750px;
+        width: 90%;
+        margin: auto;
+    }
+    .SliderDiv {
+        img {
+            height: 250px;
+        }
+    }
+}
