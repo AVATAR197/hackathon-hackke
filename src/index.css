@@ -3,12 +3,12 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;700&family=Roboto:wght@300;400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;700;900&family=Roboto:wght@300;400;700;900&display=swap');
 
 body {
     margin: 0;
     font-family: 'Nunito Sans', sans-serif;
-    color: #323234;
+    color: #183446;
 }
 
 code {

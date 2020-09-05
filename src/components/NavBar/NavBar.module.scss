@@ -16,6 +16,8 @@
     .Title {
         font-size: 1.5em;
         text-transform: uppercase;
+        color: #38AECC;
+        font-weight: 900;
     }
 
     .Items {
@@ -28,14 +30,16 @@
             text-align: center;
             padding: 10px;
             margin: 0 2.5px;
-            color: #323234;
+            color: #183446;
             text-decoration: none;
             border-radius: 3px;
             transition: 0.2s ease-in-out;
             text-transform: uppercase;
 
             &:hover {
-                background-color: #f2f2f2;
+                transition: 0.2s ease-in-out;
+                background-color: #0090C1;
+                color: #fff;
             }
         }
     }
