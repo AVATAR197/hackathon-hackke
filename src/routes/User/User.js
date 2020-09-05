@@ -7,21 +7,25 @@ import Tips from './Tips/Tips';
 const items = [
     {
         name: 'dashboard',
-        path: '/dashboard',
+        path: '/user/dashboard',
     },
     {
         name: 'profile',
-        path: '/profile',
+        path: '/user/profile',
     },
     {
         name: 'tips from doctor',
-        path: '/tips',
+        path: '/user/tips',
+    },
+    {
+        name: 'about the doctor',
+        path: '/user/about-doctor',
     },
 ];
 
 const User = () => {
     return (
-        <Dashboard items={items}>
+        <Dashboard title="pacient" items={items}>
             <Switch>
                 <Route path={`/user/profile`}>
                     <Profile />
