@@ -2,6 +2,10 @@
     "name": "hackketemplates",
     "version": "0.1.0",
     "private": true,
+    "engines": {
+        "node": "14.6.0",
+        "npm": "6.14.5"
+    },
     "dependencies": {
         "@testing-library/jest-dom": "^4.2.4",
         "@testing-library/react": "^9.3.2",
@@ -15,15 +19,18 @@
         "react-scripts": "3.4.3",
         "react-slick": "^0.27.10",
         "react-table": "^7.5.0",
+        "serve": "^11.3.2",
         "slick-carousel": "^1.8.1",
         "sweetalert2": "^9.17.2",
         "validator": "^13.1.1"
     },
     "scripts": {
-        "start": "react-scripts start",
         "build": "react-scripts build",
         "test": "react-scripts test",
-        "eject": "react-scripts eject"
+        "eject": "react-scripts eject",
+        "heroku-postbuild": "npm run build",
+        "dev": "react-scripts start",
+        "start": "serve -s build"
     },
     "eslintConfig": {
         "extends": "react-app"
