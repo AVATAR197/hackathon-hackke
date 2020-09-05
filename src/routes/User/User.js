@@ -3,11 +3,12 @@ import Dashboard from '../Dashboard/Dashboard';
 import { Switch, Route } from 'react-router-dom';
 import Profile from './Profile/Profile';
 import Tips from './Tips/Tips';
+import MainPage from './MainPage/MainPage';
 
 const items = [
     {
         name: 'dashboard',
-        path: '/user/dashboard',
+        path: '/user',
     },
     {
         name: 'profile',
@@ -27,6 +28,9 @@ const User = () => {
     return (
         <Dashboard title="pacient" items={items}>
             <Switch>
+                <Route path={`/user`}>
+                    <MainPage />
+                </Route>
                 <Route path={`/user/profile`}>
                     <Profile />
                 </Route>
