@@ -55,7 +55,6 @@ const Dashboard = () => {
             <div className={classes.AddDataButtonWrapper}>
                 <AddDataButton />
             </div>
-            <AddDataButton />
         </div>
     );
 };
