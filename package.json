@@ -19,6 +19,7 @@
         "react-scripts": "3.4.3",
         "react-slick": "^0.27.10",
         "react-table": "^7.5.0",
+        "serve": "^11.3.2",
         "slick-carousel": "^1.8.1",
         "sweetalert2": "^9.17.2",
         "validator": "^13.1.1"
