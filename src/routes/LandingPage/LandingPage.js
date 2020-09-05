@@ -13,12 +13,20 @@ const LandingPage = () => {
             </div>
 
             <h1>Sign in as</h1>
-            <div>
-                <Link to="/user">Pacient</Link>
-                <Link to="/doctor">Doctor</Link>
+            <div className={classes.ButtonWrapper}>
+                <Link className={classes.Button} to="/user">
+                    Pacient
+                </Link>
+                <Link className={classes.Button} to="/doctor">
+                    Doctor
+                </Link>
             </div>
-            <p>You don't have an account?</p>
-            <p>Sign up</p>
+            <div>
+                <p>You don't have an account?</p>
+                <Link>Sign Up</Link>
+            </div>
+
+            <p></p>
         </div>
     );
 };

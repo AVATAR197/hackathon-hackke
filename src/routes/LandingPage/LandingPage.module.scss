@@ -1,5 +1,8 @@
 .Wrapper {
-    background-color: orange;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     .Image {
         position: relative;
         img {
@@ -7,15 +10,23 @@
             height: 450px;
             object-fit: cover;
         }
+    }
+    h1 {
+        font-size: 2.5em;
+    }
+    .ButtonWrapper {
+        margin: 25px 0;
+        .Button {
+            padding: 20px 40px;
+            margin: 15px;
+            background-color: #5eb3fd;
+            font-size: 1.5em;
+            text-decoration: none;
+            color: white;
+            border-radius: 5px;
 
-        &::after {
-            content: '';
-            height: 100%;
-            width: 100%;
-            position: absolute;
-            left: 0;
-            top: 0;
-            background-color: rgba(0, 0, 0, 0.5);
+            &:hover {
+            }
         }
     }
 }
