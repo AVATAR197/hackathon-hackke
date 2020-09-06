@@ -3,25 +3,25 @@ import moment from 'moment';
 import Swal from 'sweetalert2';
 import classes from './AddDataButton.module.scss';
 import Button from '../UI/Button/Button';
+import { setGlykemia } from '../../utils/utils';
 
 const AddData = () => {
-    const [data, setData] = useState({
-        gluken: null,
-        inzuline: null,
-    });
-
-    const handleChange = (e) => {
-        const { name, value } = e.target;
-        setData({
-            ...data,
-            [name]: value,
-        });
-    };
-
-    const handleSubmit = (e) => {
-        e.preventDefault();
+    const handleSubmit = (gluken, inzuline) => {
         //toto sa posle do DB spolu s udajmi
-        let date = moment().format('DD-MM-YYYY hh:mm:ss');
+        let date = moment().format('YYYY-MM-DD');
+
+        const payload = {
+            date_meassurment: date,
+            value_glykem: gluken,
+            units_inzulin: inzuline,
+            id_patient: '1',
+        };
+
+        setGlykemia(payload).then((res) => {
+            if (res.status === 'success') {
+                alert('success');
+            }
+        });
     };
 
     const show = async () => {
@@ -41,10 +41,7 @@ const AddData = () => {
         });
 
         if (formValues) {
-            setData({
-                gluken: formValues[0],
-                inzuline: formValues[1],
-            });
+            handleSubmit(formValues[0], formValues[1]);
         }
     };
 

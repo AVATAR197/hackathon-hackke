@@ -1,37 +1,45 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import AddDataButton from '../../../components/AddDataButton/AddDataButton';
 import classes from './MainPage.module.scss';
 import { useTable } from 'react-table';
 import Table from '../../../components/Table/Table';
+import { getGlykemia } from '../../../utils/utils';
+import moment from 'moment';
 
 const Dashboard = () => {
     const columns = React.useMemo(
         () => [
             {
                 Header: 'Date',
-                accessor: 'date', // accessor is the "key" in the data
+                accessor: 'date_meassurment', // accessor is the "key" in the data
             },
             {
-                Header: 'Gluken',
-                accessor: 'gluken',
+                Header: 'Glyken',
+                accessor: 'value_glykem',
             },
             {
                 Header: 'Insuline',
-                accessor: 'insuline',
+                accessor: 'units_inzulin',
             },
         ],
         []
     );
-    const data = React.useMemo(
-        () => [
-            {
-                date: '10.2.2020 15:48',
-                gluken: '152.25 mg/dl',
-                insuline: '15',
-            },
-        ],
-        []
-    );
+    const [data, setData] = useState([]);
+
+    useEffect(() => {
+        getGlykemia('1').then((res) => {
+            console.log(res);
+            const arr = [];
+            res.forEach((e) => {
+                arr.push({
+                    ...e,
+                    date_meassurment: moment(e.date_meassurment).format('L'),
+                });
+            });
+            setData(arr);
+        });
+    }, []);
+
     const tableInstance = useTable({ columns, data });
 
     const {

@@ -89,3 +89,48 @@ export const addPatient = (data) => {
             });
     });
 };
+
+export const setGlykemia = (data) => {
+    console.log(data);
+    const requestOptions = {
+        method: 'POST',
+        headers: {
+            'Cache-Control': 'no-cache',
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ ...data }),
+    };
+
+    return new Promise((resolve, reject) => {
+        fetch('http://localhost:3000/set-patient-details', requestOptions)
+            .then((res) => res.json())
+            .then((body) => {
+                resolve(body);
+            })
+            .catch((err) => {
+                reject(err);
+            });
+    });
+};
+
+export const getGlykemia = (id) => {
+    const requestOptions = {
+        method: 'POST',
+        headers: {
+            'Cache-Control': 'no-cache',
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ id: id }),
+    };
+
+    return new Promise((resolve, reject) => {
+        fetch('http://localhost:3000/get-patient-details', requestOptions)
+            .then((res) => res.json())
+            .then((body) => {
+                resolve(body);
+            })
+            .catch((err) => {
+                reject(err);
+            });
+    });
+};

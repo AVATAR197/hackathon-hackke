@@ -12,10 +12,10 @@ const LandingPage = () => {
             </div>
             <h1>Sign in as</h1>
             <div className={classes.ButtonWrapper}>
-                <Link className={classes.Button} to="/login/patient">
+                <Link className={classes.Button} to="/user">
                     Patient
                 </Link>
-                <Link className={classes.Button} to="/login/doctor">
+                <Link className={classes.Button} to="/doctor">
                     Doctor
                 </Link>
             </div>

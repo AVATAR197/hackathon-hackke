@@ -43,8 +43,15 @@ const AddPatient = () => {
         }).then((result) => {
             if (result.value) {
                 //run the addPatient function from utils folder and show the message + show loader... when you get response from server then display the message
-                addPatient({ ...state });
-                Swal.fire('Deleted!', 'Your file has been deleted.', 'success');
+                addPatient({ ...state }).then((res) => {
+                    if (res.status === 'success') {
+                        Swal.fire(
+                            'Success!',
+                            'User has been added.',
+                            'success'
+                        );
+                    }
+                });
             }
         });
     };
