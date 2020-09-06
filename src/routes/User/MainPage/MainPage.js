@@ -3,7 +3,7 @@ import AddDataButton from '../../../components/AddDataButton/AddDataButton';
 import classes from './MainPage.module.scss';
 import { useTable } from 'react-table';
 import Table from '../../../components/Table/Table';
-import { getGlykemia } from '../../../utils/utils';
+import { getGlykemia, setGlykemia } from '../../../utils/utils';
 import moment from 'moment';
 
 const Dashboard = () => {
@@ -50,6 +50,26 @@ const Dashboard = () => {
         prepareRow,
     } = tableInstance;
 
+    const handleSubmit = (gluken, inzuline) => {
+        //toto sa posle do DB spolu s udajmi
+        let date = moment().format('YYYY-MM-DD');
+
+        const payload = {
+            date_meassurment: date,
+            value_glykem: gluken,
+            units_inzulin: inzuline,
+            id_patient: '1',
+        };
+
+        setGlykemia(payload).then((res) => {
+            if (res.status === 'success') {
+                setData((prevState) => {
+                    return [...prevState, { ...payload }];
+                });
+            }
+        });
+    };
+
     return (
         <div className={classes.Wrapper}>
             <h1>Main Page</h1>
@@ -61,7 +81,7 @@ const Dashboard = () => {
                 prepareRow={prepareRow}
             />
             <div className={classes.AddDataButtonWrapper}>
-                <AddDataButton />
+                <AddDataButton handleSubmit={handleSubmit} />
             </div>
         </div>
     );

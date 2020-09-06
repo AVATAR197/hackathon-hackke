@@ -14,10 +14,6 @@ const items = [
         name: 'add patient',
         path: '/doctor/add-patient',
     },
-    {
-        name: 'profile',
-        path: '/doctor/profile',
-    },
 ];
 
 const Doctor = () => {
