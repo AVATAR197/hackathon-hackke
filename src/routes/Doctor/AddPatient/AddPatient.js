@@ -50,7 +50,6 @@ const AddPatient = () => {
     };
 
     const inputTypeHandler = (type, e) => {
-        console.log(state);
         dispatch({ type: type, text: e.target.value });
     };
 

@@ -31,7 +31,7 @@ const NavBar = ({ title, items = [] }) => {
                         </NavLink>
                     );
                 })}
-            </div>
+            </ul>
         </div>
     );
 };
