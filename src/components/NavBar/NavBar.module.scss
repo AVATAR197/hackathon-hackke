@@ -13,6 +13,10 @@
     box-shadow: 0 4px 2px -2px #80808042;
     box-sizing: border-box;
 
+    .fa-bars{
+        display: none;
+    }
+
     .Title {
         font-size: 1.5em;
         text-transform: uppercase;
@@ -56,5 +60,11 @@
             background-color: #0090C1;
             color: #fff;
         }
+    }
+}
+
+@media only screen and (max-width: 1024px){
+    .Items{
+        display: none;
     }
 }

@@ -12,7 +12,6 @@ const NavBar = ({ title, items = [] }) => {
             <div className={classes.Title}><i class={title === 'patient' ? "fas fa-hospital-user" : "fas fa-stethoscope"}></i>{title}</div>
            
 
-
             <ul className={classes.Items}>
                 {items.map((e, index) => {
                     return (
