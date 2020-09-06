@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Dashboard from '../Dashboard/Dashboard';
 import { Switch, Route } from 'react-router-dom';
 import AddPatient from './AddPatient/AddPatient';

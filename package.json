@@ -29,7 +29,7 @@
         "test": "react-scripts test",
         "eject": "react-scripts eject",
         "heroku-postbuild": "npm run build",
-        "dev": "react-scripts start",
+        "dev": "set \"REACT_APP_STAGE=local\" && react-scripts start",
         "start": "serve -s build"
     },
     "eslintConfig": {

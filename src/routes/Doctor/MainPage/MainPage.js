@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import classes from './MainPage.module.scss';
 import { useTable, useGlobalFilter } from 'react-table';
 import GlobalFilter from '../../../components/GlobalSearch/GlobalSearch';
 import Button from '../../../components/UI/Button/Button';
 import Table from '../../../components/Table/Table';
 import { useHistory } from 'react-router-dom';
+import moment from 'moment';
 
 const MainPage = () => {
     const history = useHistory();
@@ -12,11 +13,11 @@ const MainPage = () => {
         () => [
             {
                 Header: 'First Name',
-                accessor: 'firstName', // accessor is the "key" in the data
+                accessor: 'firstname', // accessor is the "key" in the data
             },
             {
-                Header: 'Second Name',
-                accessor: 'secondName',
+                Header: 'Last Name',
+                accessor: 'lastname',
             },
             {
                 Header: 'Date of birth',
@@ -24,11 +25,11 @@ const MainPage = () => {
             },
             {
                 Header: 'Diabetes type',
-                accessor: 'diabetesType',
+                accessor: 'diabetes_type',
             },
             {
                 Header: 'Details',
-                accessor: 'id',
+                accessor: 'id_patient',
                 Cell: ({ cell }) => (
                     <Button
                         value={cell.row.values.name}
@@ -45,95 +46,22 @@ const MainPage = () => {
         ],
         []
     );
-    const data = React.useMemo(
-        () => [
-            {
-                firstName: 'Hello',
-                secondName: 'World',
-                birthdate: '10.2.2001',
-                diabetesType: 2,
-                id: 'kasdjflksdajfkllasjkdflksjdl',
-            },
-            {
-                firstName: 'John',
-                secondName: 'Krakskf',
-                birthdate: '10.2.20545001',
-                diabetesType: 1,
-                id: 'kas68s5df4153sd41fsd14f',
-            },
-            {
-                firstName: 'sadfasdf',
-                secondName: 'asdfasdf',
-                birthdate: '10.2.2001',
-                diabetesType: 1,
-                id: '5465as2d4f56s41d56f24sd6f41sd',
-            },
-            {
-                firstName: 'Hello',
-                secondName: 'World',
-                birthdate: '10.2.2001',
-                diabetesType: 2,
-                id: '652sdfs6d2f5s32d4fsd',
-            },
-            {
-                firstName: 'Hello',
-                secondName: 'World',
-                birthdate: '10.2.2001',
-                diabetesType: 2,
-                id: 'kasdjflksdajfkllasjkdflksjdl',
-            },
-            {
-                firstName: 'John',
-                secondName: 'Krakskf',
-                birthdate: '10.2.20545001',
-                diabetesType: 1,
-                id: 'kas68s5df4153sd41fsd14f',
-            },
-            {
-                firstName: 'sadfasdf',
-                secondName: 'asdfasdf',
-                birthdate: '10.2.2001',
-                diabetesType: 1,
-                id: '5465as2d4f56s41d56f24sd6f41sd',
-            },
-            {
-                firstName: 'Hello',
-                secondName: 'World',
-                birthdate: '10.2.2001',
-                diabetesType: 2,
-                id: '652sdfs6d2f5s32d4fsd',
-            },
-            {
-                firstName: 'Hello',
-                secondName: 'World',
-                birthdate: '10.2.2001',
-                diabetesType: 2,
-                id: 'kasdjflksdajfkllasjkdflksjdl',
-            },
-            {
-                firstName: 'John',
-                secondName: 'Krakskf',
-                birthdate: '10.2.20545001',
-                diabetesType: 1,
-                id: 'kas68s5df4153sd41fsd14f',
-            },
-            {
-                firstName: 'sadfasdf',
-                secondName: 'asdfasdf',
-                birthdate: '10.2.2001',
-                diabetesType: 1,
-                id: '5465as2d4f56s41d56f24sd6f41sd',
-            },
-            {
-                firstName: 'Hello',
-                secondName: 'World',
-                birthdate: '10.2.2001',
-                diabetesType: 2,
-                id: '652sdfs6d2f5s32d4fsd',
-            },
-        ],
-        []
-    );
+    const [data, setData] = useState([]);
+
+    useEffect(() => {
+        fetch('http://localhost:3000/test', { method: 'GET' })
+            .then((res) => res.json())
+            .then((body) => {
+                const arr = [];
+                body.forEach((e) => {
+                    arr.push({
+                        ...e,
+                        birthdate: moment(e.birthdate).format('L'),
+                    });
+                });
+                setData(arr);
+            });
+    }, []);
 
     const {
         getTableProps,

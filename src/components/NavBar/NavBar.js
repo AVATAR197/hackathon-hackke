@@ -7,7 +7,16 @@ import { NavLink } from 'react-router-dom';
 const NavBar = ({ title, items = [] }) => {
     return (
         <div className={classes.Wrapper}>
-            <div className={classes.Title}><i class={title === 'patient' ? "fas fa-hospital-user" : "fas fa-stethoscope"}></i>{title}</div>
+            <div className={classes.Title}>
+                <i
+                    className={
+                        title === 'patient'
+                            ? 'fas fa-hospital-user'
+                            : 'fas fa-stethoscope'
+                    }
+                ></i>
+                {title}
+            </div>
             <div className={classes.Items}>
                 {items.map((e, index) => {
                     return (
