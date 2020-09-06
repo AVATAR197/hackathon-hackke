@@ -20,13 +20,13 @@
     .Title {
         font-size: 1.5em;
         text-transform: uppercase;
-        color: #38AECC;
+        color: #046e8f;
         font-weight: 900;
         user-select: none; 
 
-        i{
+        i {
             margin-right: 5px;
-            color: #046E8F;
+            color: #046e8f;
         }
     }
 
@@ -51,13 +51,13 @@
             text-transform: uppercase;
 
             &:hover {
-                background-color: #0090C1;
+                background-color: #0090c1;
                 color: #fff;
             }
         }
 
-        .ActiveLink{
-            background-color: #0090C1;
+        .ActiveLink {
+            background-color: #0090c1;
             color: #fff;
         }
     }

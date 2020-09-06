@@ -1,23 +1,21 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import classes from './LandingPage.module.scss';
+import LandingPageImage from '../../assets/landingPageImage.jpg';
 
 const LandingPage = () => {
     return (
         <div className={classes.Wrapper}>
             <div className={classes.Image}>
-                <img
-                    src="https://images.pexels.com/photos/127873/pexels-photo-127873.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                    alt=""
-                />
+                <h1>Diabetes Tracker</h1>
+                <img src={LandingPageImage} alt="" />
             </div>
-
             <h1>Sign in as</h1>
             <div className={classes.ButtonWrapper}>
-                <Link className={classes.Button} to="/user">
+                <Link className={classes.Button} to="/login/patient">
                     Patient
                 </Link>
-                <Link className={classes.Button} to="/doctor">
+                <Link className={classes.Button} to="/login/doctor">
                     Doctor
                 </Link>
             </div>
@@ -25,8 +23,7 @@ const LandingPage = () => {
                 <p>You don't have an account?</p>
                 <Link>Sign Up</Link>
             </div>
-
-            <p></p>
+            <div></div>
         </div>
     );
 };

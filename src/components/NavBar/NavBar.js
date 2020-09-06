@@ -5,14 +5,19 @@ import { NavLink } from 'react-router-dom';
 //items bude array of objects = [{name: "main menu", path: "/main-menu"}]
 
 const NavBar = ({ title, items = [] }) => {
-
- 
     return (
         <div className={classes.Wrapper}>
-            <div className={classes.Title}><i class={title === 'patient' ? "fas fa-hospital-user" : "fas fa-stethoscope"}></i>{title}</div>
-           
-
-            <ul className={classes.Items}>
+            <div className={classes.Title}>
+                <i
+                    className={
+                        title === 'patient'
+                            ? 'fas fa-hospital-user'
+                            : 'fas fa-stethoscope'
+                    }
+                ></i>
+                {title}
+            </div>
+            <div className={classes.Items}>
                 {items.map((e, index) => {
                     return (
                         <NavLink
@@ -26,7 +31,7 @@ const NavBar = ({ title, items = [] }) => {
                         </NavLink>
                     );
                 })}
-            </ul>
+            </div>
         </div>
     );
 };
