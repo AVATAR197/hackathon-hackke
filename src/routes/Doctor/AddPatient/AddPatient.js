@@ -71,6 +71,7 @@ const AddPatient = () => {
                         onChange={(e) => inputTypeHandler('first_name', e)}
                         type="text"
                         name="first_name"
+                        autoComplete="off"
                     />
                 </section>
                 <section>
@@ -79,6 +80,7 @@ const AddPatient = () => {
                         onChange={(e) => inputTypeHandler('last_name', e)}
                         type="text"
                         name="last_name"
+                        autoComplete="off"
                     />
                 </section>
                 <section>
@@ -87,6 +89,7 @@ const AddPatient = () => {
                         onChange={(e) => inputTypeHandler('birth_number', e)}
                         type="text"
                         name="birth_number"
+                        autoComplete="off"
                     />
                 </section>
                 <section>
@@ -95,6 +98,7 @@ const AddPatient = () => {
                         onChange={(e) => inputTypeHandler('email', e)}
                         type="text"
                         name="email"
+                        autoComplete="off"
                     />
                 </section>
                 <section>
@@ -103,6 +107,7 @@ const AddPatient = () => {
                         onChange={(e) => inputTypeHandler('tel_number', e)}
                         type="text"
                         name="tel_number"
+                        autoComplete="off"
                     />
                 </section>
                 <section>
@@ -111,6 +116,7 @@ const AddPatient = () => {
                         onChange={(e) => inputTypeHandler('diabetes_type', e)}
                         type="text"
                         name="diabetes_type"
+                        autoComplete="off"
                     />
                 </section>
                 <section>
@@ -119,6 +125,7 @@ const AddPatient = () => {
                         onChange={(e) => inputTypeHandler('birthdate', e)}
                         type="text"
                         name="birthdate"
+                        autoComplete="off"
                     />
                 </section>
                 <Button type="submit">Add the user</Button>
